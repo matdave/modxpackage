@@ -1,0 +1,20 @@
+{
+    "name": "matdave/modxpackage",
+    "description": "Base Package for MODX 3",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MatDave\\MODXPackage\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "matdave",
+            "email": "mat@matdave.com"
+        }
+    ],
+    "require-dev": {
+        "modx/revolution": "^3.0"
+    }
+}
