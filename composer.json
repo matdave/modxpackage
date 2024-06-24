@@ -1,8 +1,15 @@
 {
     "name": "matdave/modxpackage",
-    "description": "Base Package for MODX 3",
+    "description": "Base Package Library for MODX 3",
     "type": "library",
     "license": "MIT",
+    "keywords": ["modx", "package"],
+    "version": "1.0.0",
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
     "autoload": {
         "psr-4": {
             "MatDave\\MODXPackage\\": "src/"
@@ -14,6 +21,9 @@
             "email": "mat@matdave.com"
         }
     ],
+    "require": {
+        "php": ">=7.4"
+    },
     "require-dev": {
         "modx/revolution": "^3.0"
     }
