@@ -30,8 +30,8 @@ class Service
             'templatesPath' => $corePath . 'templates/',
             'assetsPath' => $assetsPath,
             'assetsUrl' => $assetsUrl,
-            'jsUrl' => $assetsUrl . 'mgr/js/',
-            'cssUrl' => $assetsUrl . 'mgr/css/',
+            'jsUrl' => $assetsUrl . 'js/',
+            'cssUrl' => $assetsUrl . 'css/',
             'connectorUrl' => $this->modx->getOption('connector_url'),
             'version' => self::VERSION
         ], $options);
