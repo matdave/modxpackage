@@ -12,6 +12,8 @@ class Service
 
     public $options = [];
 
+    public $config = [];
+
     public function __construct(&$modx, array $options = [])
     {
         $this->modx = $modx;
@@ -21,7 +23,7 @@ class Service
         $assetsUrl = $this->getOption('assets_url', $options, $this->modx->getOption('assets_url', null, MODX_ASSETS_URL) . 'components/' . $this->namespace . '/');
 
         /* loads some default paths for easier management */
-        $this->options = array_merge([
+        $this->options = $this->config = array_merge([
             'namespace' => $this->namespace,
             'corePath' => $corePath,
             'modelPath' => $corePath . 'src/Model/',
