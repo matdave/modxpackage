@@ -22,7 +22,9 @@
         }
     ],
     "require": {
-        "php": ">=7.4"
+        "ext-curl": "*",
+        "php": ">=7.4",
+        "ext-json": "*"
     },
     "require-dev": {
         "modx/revolution": "^3.0"
