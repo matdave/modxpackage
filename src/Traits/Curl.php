@@ -4,7 +4,7 @@ namespace MatDave\MODXPackage\Traits;
 
 trait Curl
 {
-    protected function curl($path, $method = 'GET', $params = [], $headers = [])
+    protected function curl($path, $method = 'GET', $params = [], $headers = [], $ch_options = [])
     {
         if (empty($this->api)) {
             return json_encode(['error' => 'No endpoint is set.']);
@@ -36,6 +36,9 @@ trait Curl
                     curl_setopt($ch, CURLOPT_URL, $this->api . $path . '?' . http_build_query($params));
                     break;
             }
+        }
+        foreach ($ch_options as $option => $value) {
+            curl_setopt($ch, $option, $value);
         }
         $result = curl_exec($ch);
         $statusCode = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
